@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Josué Hernández | AI Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #0081a7;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --text: #334155;
+            --gray: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: #f1f5f9;
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            background: var(--dark);
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            margin: 0 auto 25px;
+            display: block;
+            object-fit: cover;
+            background: #222;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin: 30px 0 15px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 5px;
+        }
+
+        .contact-item {
+            font-size: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item i {
+            color: var(--primary);
+            width: 15px;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            margin: 0 5px 8px 0;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 50px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.1;
+        }
+
+        header p {
+            font-size: 18px;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .summary {
+            margin-top: 30px;
+            font-size: 15px;
+            color: var(--gray);
+            text-align: justify;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 40px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: #e2e8f0;
+        }
+
+        .exp-item {
+            margin-bottom: 25px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .exp-role {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--dark);
+        }
+
+        .exp-date {
+            font-size: 13px;
+            color: var(--gray);
+            font-weight: 600;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            color: var(--secondary);
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .exp-desc {
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .exp-desc li {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: #f8fafc;
+            padding: 10px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .cert-info h4 {
+            font-size: 14px;
+            color: var(--dark);
+        }
+
+        .cert-info p {
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn-print" onclick="window.print()" style="position: fixed; top: 20px; right: 20px; background: #2563eb; color: white; border: none; padding: 12px 24px; border-radius: 50px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 100;">Descargar CV en PDF</button>
+
+    <div class="cv-container">
+        <!-- Sidebar Left -->
+        <aside class="sidebar">
+            <div style="text-align: center;">
+                <div class="profile-img"
+                    style="display: flex; align-items: center; justify-content: center; font-size: 60px; background: #334155;">
+                    JH</div>
+            </div>
+
+            <h2>Contacto</h2>
+            <div class="contact-item"><i class="fas fa-phone"></i> 961 276 5041</div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> josuehg59@gmail.com</div>
+            <div class="contact-item"><i class="fas fa-location-dot"></i> Tuxtla Gtz, Chiapas</div>
+            <div class="contact-item"><i class="fab fa-github"></i> github.com/JosueDev-AI</div>
+
+            <h2>Habilidades IA</h2>
+            <div class="skill-tag">Python (FastAPI)</div>
+            <div class="skill-tag">Gemini / GPT APIs</div>
+            <div class="skill-tag">MCP Architecture</div>
+            <div class="skill-tag">AI Prompting</div>
+            <div class="skill-tag">Automatización</div>
+
+            <h2>Habilidades Negocio</h2>
+            <div class="skill-tag">SAP (Logic)</div>
+            <div class="skill-tag">Gestión Inventarios</div>
+            <div class="skill-tag">Liderazgo Equipos</div>
+            <div class="skill-tag">Logística Retail</div>
+            <div class="skill-tag">Análisis Procesos</div>
+
+            <h2>Idiomas</h2>
+            <div class="contact-item">Español (Nativo)</div>
+            <div class="contact-item">Inglés (Intermedio - Técnico)</div>
+        </aside>
+
+        <!-- Main Content Right -->
+        <main class="main-content">
+            <header>
+                <h1>JOSUÉ HERNÁNDEZ GUTIÉRREZ</h1>
+                <p>AI-Powered Full-Stack & Mobile Developer</p>
+            </header>
+
+            <div class="summary">
+                Analista Programador con una sólida formación lógica desde 1996 y una trayectoria de 18 años liderando procesos críticos en el sector retail. <strong>Graduado con promedio sobresaliente (9.5)</strong>, recientemente especializado en el desarrollo Full-Stack y Móvil apoyado por Inteligencia Artificial. Experto en transformar requerimientos de negocio complejos en soluciones técnicas eficientes mediante el uso de Python, Android Studio y modelos de lenguaje avanzado (LLMs).
+            </div>
+
+            <div class="section-title">Experiencia Destacada</div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-role">Mobile App Developer</div>
+                    <div class="exp-date">2023 — Actualidad</div>
+                </div>
+                <div class="exp-company">NeoMessage (Android Project)</div>
+                <div class="exp-desc">
+                    Desarrollo de una aplicación nativa de mensajería para Android utilizando Android Studio.
+                    <ul>
+                        <li>Implementación de interfaces modernas y optimización de flujo de datos.</li>
+                        <li>Integración de servicios backend para comunicación en tiempo real.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-role">Lead Developer & Founder</div>
+                    <div class="exp-date">2024 — Actualidad</div>
+                </div>
+                <div class="exp-company">Titan Business Studio (Proyecto Independiente)</div>
+                <div class="exp-desc">
+                    Desarrollo integral de <strong>Titan POS</strong>, un sistema de gestión de ventas e inventarios de
+                    alto rendimiento.
+                    <ul>
+                        <li>Arquitectura backend optimizada con Python y APIs de IA para automatización de tareas.</li>
+                        <li>Interfaces dinámicas (HTML5/CSS3) con enfoque en experiencia de usuario.</li>
+                        <li>Implementación de protocolos MCP para interacción avanzada de agentes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-role">Administrador de Inventario / Coordinador</div>
+                    <div class="exp-date">2000 — 2018</div>
+                </div>
+                <div class="exp-company">Farmacias del Ahorro</div>
+                <div class="exp-desc">
+                    Liderazgo de procesos operativos y logísticos en una de las cadenas más grandes de México.
+                    <ul>
+                        <li>Gestión y control de inventarios masivos con precisión absoluta.</li>
+                        <li>Dirección de equipos de alto rendimiento (20+ personas).</li>
+                        <li>Optimización de sistemas de servicio al cliente y reporteo gerencial.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-title">Certificaciones Recientes</div>
+
+            <div class="cert-item">
+                <i class="fas fa-certificate" style="font-size: 24px; color: var(--primary);"></i>
+                <div class="cert-info">
+                    <h4>Python en la Práctica</h4>
+                    <p>Daxus LATAM | Abril 2026 (8 Horas)</p>
+                </div>
+            </div>
+
+            <div class="cert-item">
+                <i class="fas fa-brain" style="font-size: 24px; color: var(--primary);"></i>
+                <div class="cert-info">
+                    <h4>Desarrollo con IA: De 0 a Producción</h4>
+                    <p>BIG School & MoureDev | Marzo 2026 (6 Horas)</p>
+                </div>
+            </div>
+
+            <div class="section-title">Educación</div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-role">Carrera Programador Analista (GPA: 9.5)</div>
+                    <div class="exp-date">1998 — 1999</div>
+                </div>
+                <div class="exp-company">Estudios Profesionales en Informática S.C.</div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
