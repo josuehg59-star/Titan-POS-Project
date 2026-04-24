@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constancia Académica | Josué Hernández</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #b8860b;
+            --navy: #1a2a6c;
+            --paper: #fdfdfd;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #444; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 40px; font-family: 'Outfit', sans-serif; }
+
+        .certificate {
+            width: 1000px;
+            height: 750px;
+            background: var(--paper);
+            padding: 60px;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            border: 20px solid white;
+            outline: 2px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #333;
+        }
+
+        .border-inner {
+            position: absolute;
+            top: 20px; bottom: 20px; left: 20px; right: 20px;
+            border: 2px solid var(--gold);
+            pointer-events: none;
+        }
+
+        .header h1 { font-family: 'Cinzel', serif; font-size: 28px; color: var(--navy); margin-bottom: 10px; }
+        .header h2 { font-size: 18px; color: var(--gold); letter-spacing: 3px; margin-bottom: 40px; }
+
+        .content p { font-size: 22px; margin-bottom: 15px; }
+        .name { font-family: 'Cinzel', serif; font-size: 48px; font-weight: 700; color: var(--navy); margin: 30px 0; border-bottom: 2px solid var(--gold); padding-bottom: 10px; min-width: 600px; }
+        
+        .career { font-size: 32px; font-weight: 600; color: #444; margin-bottom: 30px; }
+
+        .score {
+            font-size: 24px;
+            background: var(--navy);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .details { margin-top: 40px; font-size: 16px; color: #666; max-width: 800px; line-height: 1.6; }
+
+        .footer {
+            margin-top: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 50px;
+        }
+
+        .signature {
+            border-top: 1px solid #333;
+            width: 250px;
+            font-size: 12px;
+            padding-top: 10px;
+        }
+
+        .seal {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            width: 120px;
+            height: 120px;
+            border: 4px double var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--gold);
+            transform: rotate(-15deg);
+            opacity: 0.6;
+            font-size: 12px;
+        }
+
+        .btn-pdf {
+            position: fixed;
+            top: 20px; right: 20px;
+            background: #1a2a6c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            z-index: 100;
+        }
+
+        @media print {
+            .btn-pdf { display: none; }
+            body { background: white; padding: 0; }
+            .certificate { box-shadow: none; border: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-pdf" onclick="window.print()">Guardar como PDF</button>
+
+    <div class="certificate">
+        <div class="border-inner"></div>
+
+        <div class="header">
+            <h1>ESTUDIOS PROFESIONALES EN INFORMÁTICA S.C.</h1>
+            <h2>RECONOCIMIENTO ACADÉMICO</h2>
+        </div>
+
+        <div class="content">
+            <p>Otorga la presente Constancia en la carrera de:</p>
+            <div class="career">PROGRAMADOR ANALISTA</div>
+            <p>A:</p>
+            <div class="name">JOSUÉ HERNÁNDEZ GUTIÉRREZ</div>
+            <p>En virtud de haber acreditado satisfactoriamente los estudios correspondientes.</p>
+        </div>
+
+        <div class="score">PROMEDIO GENERAL: 9.5 (Sobresaliente)</div>
+
+        <div class="details">
+            Expedido en la ciudad de Tuxtla Gutiérrez, Chiapas, a los siete días del mes de junio de mil novecientos noventa y nueve.
+            <br>Avalado por la Secretaría de Educación del Estado de Chiapas.
+        </div>
+
+        <div class="footer">
+            <div class="signature">
+                <strong>LIC. RENÉ ARMANDO CANCINO ALHOR</strong><br>Director de la Escuela
+            </div>
+            <div class="signature">
+                <strong>C. SEGUNDO CARLOS MONTOYA AVENDAÑO</strong><br>Director de Fortalecimiento Educativo
+            </div>
+        </div>
+
+        <div class="seal">
+            CERTIFICADO<br>RESTAURADO<br>DIGITAL
+        </div>
+    </div>
+
+</body>
+</html>
