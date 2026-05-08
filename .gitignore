@@ -1,0 +1,23 @@
+# Archivos de Datos y Videos (Pesados)
+videos_yaris/
+grabaciones/
+respaldos_json/
+*.avi
+*.mp4
+*.jpg
+
+# Configuración y Secretos (Privado)
+serviceAccountKey.json
+*.db
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
+# Carpetas de sistema
+.vscode/
+.idea/
